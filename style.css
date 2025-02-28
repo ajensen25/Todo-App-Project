@@ -1,0 +1,109 @@
+/* 'Poppins', serif */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', serif;
+}
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --grey-color: rgba(160, 160, 160, 0.5);
+
+  --primary-color: rgb(0, 200, 183);
+  --primary-color-hover: rgba(0, 200, 183, 0.75);
+}
+
+/* Main Content Styling */
+body main {
+  background: var(--primary-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 8rem 1rem;
+}
+
+main .container {
+  background: var(--white-color);
+  border-radius: 0.5rem;
+  height: min-content;
+}
+
+.container .task-input {
+  border-bottom: 2px solid var(--grey-color);
+  padding: 1.5rem;
+}
+
+.task-input .input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--grey-color);
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.task-input .input-container i {
+  color: var(--grey-color);
+  font-size: 1.2rem;
+}
+
+.task-input .input-container input {
+  width: 100%;
+  border: 0;
+  color: var(--black-color);
+  
+  outline: none;
+  font-size: 1rem;
+}
+
+.task-input .input-container input::placeholder {
+  opacity: 1;
+  color: var(--grey-color);
+}
+
+.task-input .task-navbar {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-input .task-navbar p {
+  cursor: pointer;
+}
+
+.task-input .task-navbar p.selected {
+  color: var(--primary-color);
+}
+
+.task-input .task-navbar button {
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.task-input .task-navbar button.settings-button {
+  width: 2rem;
+  height: 2rem;
+  margin-right: -1rem;
+}
+
+.task-input .task-navbar button.clear-all-button {
+  width: 5rem;
+  height: 2rem;
+}
+
+.container .tasks-list {
+  padding: 1.5rem;
+}
+
+.container .tasks-list p.placeholder-task{
+  font-size: 0.8rem;
+}

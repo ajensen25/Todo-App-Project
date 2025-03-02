@@ -52,8 +52,11 @@ function renderTaskList() {
 
 // Adding Clear All Tasks button functionality
 clearAllButton.addEventListener('click', () => {
-  tasksListHTML = '';
+  tasks = [];
+  localStorage.clear();
   renderTaskList();
 })
+
+// adding edit task functionality
 
 renderTaskList();
